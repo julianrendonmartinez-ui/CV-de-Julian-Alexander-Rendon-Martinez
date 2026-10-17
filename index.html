@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Julian Alexander Rendón Martinez | Abogado</title>
+<meta name="description" content="Abogado recién egresado de la UPAEP. Derecho e Inteligencia Artificial, juicios orales y asesoría legal corporativa.">
+<style>
+  :root{
+    --slate:#5a6a8c;        /* azul pizarra del CV: títulos y acentos */
+    --slate-soft:#8d99b5;
+    --navy:#1e2142;         /* fondo oscuro del degradado lateral */
+    --navy-2:#2c3358;
+    --gray:#707070;         /* texto de cuerpo del CV */
+    --ink:#22263d;
+    --paper:#ffffff;
+    --mist:#f3f5f9;
+    --line:#d9deea;
+    --grad:linear-gradient(180deg,var(--slate) 0%,var(--navy) 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Lato","Segoe UI",system-ui,sans-serif;color:var(--gray);background:var(--paper);line-height:1.65;font-size:17px}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{color:var(--slate);line-height:1.2}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .logo{font-weight:800;color:var(--slate);letter-spacing:.04em}
+  nav ul{display:flex;gap:22px;list-style:none;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  nav ul a:hover{color:var(--slate)}
+
+  /* HERO */
+  .hero{background:var(--grad);color:#fff;padding:90px 0 80px}
+  .hero .wrap{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center}
+  .photo{width:280px;height:280px;border-radius:50%;object-fit:cover;border:6px solid rgba(255,255,255,.25);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+  .hero h1{color:#fff;font-size:clamp(36px,6vw,60px);font-weight:800;letter-spacing:-.01em}
+  .hero .role{margin-top:14px;font-size:20px;color:#dfe4f1}
+  .hero .cedula{display:inline-block;margin-top:18px;padding:6px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;font-size:14px;letter-spacing:.08em}
+  .actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{padding:12px 24px;border-radius:8px;font-weight:700;font-size:15px;border:1.5px solid #fff;transition:.2s}
+  .btn.solid{background:#fff;color:var(--navy)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+  /* SECTIONS */
+  section{padding:80px 0}
+  section.alt{background:var(--mist)}
+  .title{font-size:30px;font-weight:800;margin-bottom:36px;display:flex;align-items:center;gap:18px}
+  .title::after{content:"";flex:1;height:2px;background:var(--slate);opacity:.45}
+  .perfil p{font-size:19px;max-width:820px}
+  .perfil strong{color:var(--slate)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+  .stat{background:var(--grad);color:#fff;border-radius:14px;padding:24px}
+  .stat b{display:block;font-size:30px}
+  .stat span{font-size:14px;color:#cfd6e8}
+
+  /* TIMELINE */
+  .timeline{position:relative;padding-left:30px;border-left:2px solid var(--line)}
+  .job{position:relative;margin-bottom:34px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 28px;transition:.2s}
+  .job:hover{box-shadow:0 10px 30px rgba(30,33,66,.12);transform:translateX(4px)}
+  .job::before{content:"";position:absolute;left:-39px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--slate);border:3px solid var(--mist);box-shadow:0 0 0 2px var(--slate)}
+  .job header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+  .job h3{font-size:19px;letter-spacing:.03em;text-transform:uppercase}
+  .job .year{font-weight:800;color:var(--slate)}
+  .job .sub{font-style:italic;margin:4px 0 10px}
+  .job ul{padding-left:20px}
+  .job li{margin:4px 0}
+  .job li::marker{color:var(--slate)}
+  .now{background:var(--slate);color:#fff;font-size:12px;padding:2px 10px;border-radius:999px;letter-spacing:.08em}
+
+  /* GRID CARDS */
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+  .card .when{font-size:13px;font-weight:800;color:var(--slate);letter-spacing:.06em;text-transform:uppercase}
+  .card h3{font-size:18px;margin:6px 0 4px}
+  .card small{color:var(--gray)}
+  .dark{background:var(--grad);color:#fff;border:none}
+  .dark h3,.dark .when{color:#fff}
+  .dark .when{opacity:.8}
+  .tags{display:flex;flex-wrap:wrap;gap:10px}
+  .tag{padding:9px 16px;border-radius:999px;background:#fff;border:1px solid var(--slate);color:var(--slate);font-weight:700;font-size:14px}
+  .langs{display:flex;gap:18px;margin-top:30px;flex-wrap:wrap}
+  .lang{flex:1;min-width:220px;background:var(--grad);color:#fff;border-radius:14px;padding:20px 24px}
+  .lang b{display:block;font-size:20px}
+
+  /* PROYECTOS (se irá llenando) */
+  .placeholder{border:2px dashed var(--slate-soft);border-radius:16px;padding:48px 24px;text-align:center;color:var(--slate);background:#fff}
+  .placeholder b{display:block;font-size:20px;margin-bottom:6px}
+
+  .proj-intro{margin:-12px 0 28px;max-width:720px}
+  .proj{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;margin-bottom:28px;box-shadow:0 10px 30px rgba(30,33,66,.08)}
+  .proj-tag{display:inline-block;background:var(--slate);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+  .proj-head h3{font-size:26px;margin:12px 0 6px}
+  .calc-controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin:26px 0;align-items:end}
+  .calc-controls label,.calc-controls .zone>span{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;color:var(--slate)}
+  .calc-controls select,.money input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:17px;color:var(--ink);background:#fff;font-family:inherit}
+  .calc-controls select:focus,.money input:focus{outline:2px solid var(--slate);border-color:var(--slate)}
+  .money{position:relative}
+  .money i{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-style:normal;color:var(--slate-soft);font-weight:800}
+  .money input{padding-left:30px}
+  .seg{display:flex;background:var(--mist);border:1px solid var(--line);border-radius:10px;padding:4px;gap:4px;margin-top:6px}
+  .seg button{flex:1;border:0;background:transparent;padding:9px 6px;border-radius:7px;font-weight:700;color:var(--gray);cursor:pointer;font-family:inherit;font-size:14px}
+  .seg button.on{background:var(--slate);color:#fff}
+  .calc-empty{text-align:center;padding:26px;background:var(--mist);border-radius:12px;color:var(--slate)}
+  .diff{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--grad);color:#fff;border-radius:14px;padding:20px 26px;margin-bottom:20px}
+  .diff small{display:block;color:#cfd6e8}
+  .diff b{font-size:34px}
+  .res-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .rcard{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;position:relative}
+  .rcard.win{border:2px solid var(--slate);background:var(--mist)}
+  .rcard .badge{position:absolute;top:0;right:0;background:var(--slate);color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:0 12px 0 10px;letter-spacing:.06em}
+  .rcard h4{font-size:22px;color:var(--slate);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .rcard h4 span{font-size:12px;font-weight:700;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--gray)}
+  .rrow{display:flex;justify-content:space-between;font-size:15px;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .rrow.sub{color:var(--slate);font-weight:700}
+  .rnet{display:flex;justify-content:space-between;align-items:flex-end;margin-top:14px}
+  .rnet b{font-size:28px;color:var(--navy)}
+  .rfoot{margin-top:12px;font-size:12.5px;color:var(--gray)}
+  .rfoot div{display:flex;justify-content:space-between}
+  .exempt{margin-top:10px;font-size:12.5px;background:#fff;border-left:4px solid var(--slate);padding:8px 12px;border-radius:6px}
+  .legal{margin-top:22px;font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+  .legal ul{padding-left:18px;margin:8px 0}
+  .legal .warn{background:var(--mist);border-radius:8px;padding:10px 14px;color:var(--slate)}
+  @media (max-width:800px){.calc-controls,.res-grid{grid-template-columns:1fr}.proj{padding:22px}}
+
+  .deck{margin-top:24px;background:var(--navy);border-radius:14px;overflow:hidden}
+  .stage{position:relative;aspect-ratio:1440/840;background:#000;display:flex;align-items:center;justify-content:center}
+  .stage img{width:100%;height:100%;object-fit:contain;display:block}
+  .nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(30,33,66,.75);color:#fff;font-size:28px;line-height:1;cursor:pointer}
+  .nav:hover{background:var(--slate)}
+  .nav.prev{left:12px}.nav.next{right:12px}
+  .deck-bar{display:flex;align-items:center;gap:14px;padding:12px 16px;color:#fff;font-size:14px;font-weight:700}
+  .deck-bar input{flex:1;accent-color:#8d99b5}
+  .deck-bar button{background:transparent;color:#fff;border:1px solid var(--slate-soft);border-radius:8px;padding:6px 12px;font-family:inherit;font-weight:700;cursor:pointer}
+  .deck-bar button:hover{background:var(--slate)}
+  .deck:fullscreen{display:flex;flex-direction:column;border-radius:0}
+  .deck:fullscreen .stage{flex:1;aspect-ratio:auto}
+
+  .cg{margin-top:24px}
+  .cg-types{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .cg-types button{padding:9px 16px;border-radius:999px;border:1px solid var(--slate);background:#fff;color:var(--slate);font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
+  .cg-types button.on{background:var(--slate);color:#fff}
+  .cg-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cg-form .full{grid-column:1/-1}
+  .cg-form label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;color:var(--slate)}
+  .cg-form input,.cg-form select,.cg-form textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;color:var(--ink);background:#fff}
+  .cg-form input:focus,.cg-form select:focus,.cg-form textarea:focus{outline:2px solid var(--slate);border-color:var(--slate)}
+  .cg-authors{background:var(--mist);border-radius:12px;padding:14px}
+  .cg-authors>span{display:block;font-size:14px;font-weight:700;color:var(--slate);margin-bottom:8px}
+  .cg-arow{display:flex;gap:8px;margin-bottom:8px}
+  .cg-arow button,.cg-add{border:0;background:transparent;cursor:pointer;font-family:inherit}
+  .cg-arow button{color:#b04a4a;font-size:22px;padding:0 6px}
+  .cg-add{color:var(--slate);font-weight:700;font-size:14px;padding:4px 0}
+  .cg-eds{display:grid;grid-template-columns:1fr 130px;gap:12px}
+  .cg-sep{grid-column:1/-1;border-top:1px solid var(--line);padding-top:14px;font-size:14px;font-weight:800;color:var(--slate)}
+  .cg-out{margin-top:26px;background:var(--grad);color:#fff;border-radius:14px;padding:22px}
+  .cg-out-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+  .cg-out-head button{background:#fff;color:var(--navy);border:0;border-radius:8px;padding:8px 16px;font-weight:800;cursor:pointer;font-family:inherit}
+  .cg-cit{background:#fff;color:var(--ink);border-radius:10px;padding:16px 18px;font-family:Georgia,"Times New Roman",serif;font-size:17px;line-height:1.7;border-left:5px solid var(--slate);min-height:60px}
+  .cg-cit.empty{color:var(--slate-soft);font-style:italic}
+  .cg-note{font-size:12.5px;color:#cfd6e8;margin-top:10px}
+  @media (max-width:800px){.cg-form{grid-template-columns:1fr}.cg-eds{grid-template-columns:1fr}}
+
+  .how{margin-top:22px;background:var(--mist);border-radius:14px;padding:22px 24px}
+  .how h4{color:var(--slate);font-size:18px;margin-bottom:8px}
+  .how ol{margin:12px 0 0;padding-left:22px}
+  .how li{margin:6px 0}
+  .how li b{color:var(--slate)}
+  .gal{margin-top:24px;columns:3 220px;column-gap:16px}
+  .gal figure{break-inside:avoid;margin-bottom:16px;border-radius:12px;overflow:hidden;background:var(--navy);cursor:zoom-in;transition:.2s}
+  .gal figure:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(30,33,66,.25)}
+  .gal img{width:100%;display:block}
+  .gal figcaption{color:#fff;font-size:13px;font-weight:700;padding:8px 12px;background:var(--grad)}
+  .nt-top{display:grid;grid-template-columns:280px 1fr;gap:24px;margin-top:22px;align-items:start}
+  figure.nt-photo{margin:0;border-radius:14px;overflow:hidden;background:var(--navy);cursor:zoom-in}
+  figure.nt-photo img{width:100%;display:block}
+  figure.nt-photo figcaption{color:#fff;font-size:13px;font-weight:700;padding:8px 12px;background:var(--grad)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+  .kpis div{background:var(--grad);color:#fff;border-radius:14px;padding:18px}
+  .kpis b{display:block;font-size:26px;line-height:1.2}
+  .kpis span{font-size:13px;color:#cfd6e8;display:block;margin-top:4px}
+  .nt-note{font-size:12.5px;margin-top:10px;color:var(--gray)}
+  @media (max-width:800px){.nt-top{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
+  .gal figcaption small,figure.nt-photo figcaption small{display:block;font-weight:400;font-size:12px;color:#cfd6e8;margin-top:2px}
+  .lightbox{position:fixed;inset:0;z-index:50;background:rgba(15,17,35,.92);display:flex;align-items:center;justify-content:center;padding:24px}
+  .lightbox[hidden]{display:none}
+  .lightbox img{max-width:100%;max-height:100%;border-radius:10px}
+  .lightbox button{position:absolute;top:14px;right:20px;background:transparent;border:0;color:#fff;font-size:40px;cursor:pointer;line-height:1}
+
+  footer{background:var(--navy);color:#cfd6e8;padding:50px 0;text-align:center}
+  footer h2{color:#fff;margin-bottom:14px}
+  footer a{color:#fff;font-weight:700;border-bottom:1px solid var(--slate-soft)}
+  footer p{margin:6px 0}
+  footer small{display:block;margin-top:24px;opacity:.6}
+
+  @media (max-width:800px){
+    .hero .wrap{grid-template-columns:1fr;text-align:center;justify-items:center}
+    .photo{width:210px;height:210px}
+    .actions{justify-content:center}
+    .stats{grid-template-columns:1fr}
+    nav ul{display:none}
+    .timeline{padding-left:20px}
+    .job::before{left:-29px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#inicio" class="logo">J. A. RENDÓN</a>
+    <ul>
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <img class="photo" src="assets/julian.png" alt="Julian Alexander Rendón Martinez">
+    <div>
+      <h1>Julian Alexander<br>Rendón Martinez</h1>
+      <p class="role">Abogado · Derecho e Inteligencia Artificial · Dirección Legal Corporativa</p>
+      <span class="cedula">CÉDULA PROFESIONAL: 15797342</span>
+      <div class="actions">
+        <a class="btn solid" href="mailto:julianrendonmartinez@gmail.com">Escríbeme</a>
+        <a class="btn ghost" href="#experiencia">Ver trayectoria</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="perfil" id="perfil">
+  <div class="wrap">
+    <h2 class="title">Perfil</h2>
+    <p>Recién egresado por la Universidad Popular Autónoma del Estado de Puebla, eligiendo como medio de titulación la presentación de la tesis <strong>“La Incorporación de la Inteligencia Artificial en el ámbito jurídico: beneficios y riesgos para los abogados mexicanos”</strong>, siendo el primer alumno de la Facultad de Derecho de UPAEP en presentar una investigación sobre la intersección entre Derecho e Inteligencia Artificial.</p>
+    <div class="stats">
+      <div class="stat"><b>1.º</b><span>en la Facultad de Derecho UPAEP con tesis sobre Derecho e IA</span></div>
+      <div class="stat"><b>Directivo</b><span>Titular de la Dirección Legal Corporativa, Grupo Andar</span></div>
+      <div class="stat"><b>Docente</b><span>Talleres sobre IA y Derecho Mexicano (2026)</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="experiencia">
+  <div class="wrap">
+    <h2 class="title">Experiencia Profesional</h2>
+    <div class="timeline">
+
+      <article class="job">
+        <header><h3>Impartición de talleres</h3><span class="year">2026</span></header>
+        <p class="sub">He impartido talleres y clases sobre la Inteligencia Artificial y el Derecho Mexicano</p>
+        <ul>
+          <li>Taller IA Agéntica para Abogados y Contadores</li>
+          <li>Plataformas Digitales en México y su relación con la LFT y la Inteligencia Artificial</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header><h3>Grupo Andar</h3><span class="now">ACTUALMENTE</span></header>
+        <p class="sub">Titular de la Dirección Legal Corporativa</p>
+        <ul>
+          <li>Asesoría y elaboración de solicitudes de conciliación prejudicial ante el CFCRL</li>
+          <li>Presentación de denuncias ante la Fiscalía General de Puebla</li>
+          <li>Asistencia en asesoramiento en tramitación de pensiones ante el IMSS</li>
+          <li>Asuntos no contenciosos derivados de actos de comercio</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header><h3>Notaría 24</h3><span class="year">2026</span></header>
+        <p class="sub">Asesoría de implementación de Inteligencia Artificial</p>
+        <ul>
+          <li>Cumplimiento Legal y PLD 2025</li>
+          <li>Gestión operativa y automatización</li>
+          <li>Calculadora ISR inteligente</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header><h3>La Ruta Smoke</h3><span class="year">2026</span></header>
+        <p class="sub">Implementación de marketing impulsado con Inteligencia Artificial</p>
+        <ul>
+          <li>Transformando un marketing aburrido por una nueva temática</li>
+          <li>Stories con temática de fútbol soccer y fútbol americano</li>
+          <li>Convirtiendo promociones con la temática del negocio</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header><h3>IEDEP</h3><span class="year">2025</span></header>
+        <p class="sub">Servicio Social · Instituto de Educación Digital del Estado de Puebla</p>
+        <ul>
+          <li>Seguimiento estratégico de casos laborales vigentes</li>
+          <li>Gestión y organización de expedientes de regularización de predios</li>
+          <li>Revisión y análisis de documentos jurídicos</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header><h3>Bufete Jurídico UPAEP</h3><span class="year">2025</span></header>
+        <p class="sub">Prácticas profesionales</p>
+        <ul>
+          <li>Asesoría legal integral en materias civil, familiar, laboral, penal y seguridad social</li>
+          <li>Seguimiento puntual de casos ante el Poder Judicial de Puebla</li>
+          <li>Gestión de trámites ante el Registro Civil del Estado</li>
+          <li>Redacción especializada de demandas, solicitudes, contratos, revocaciones y nombramientos</li>
+          <li>Atención personalizada a clientes con enfoque en resolución de conflictos</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="educacion">
+  <div class="wrap">
+    <h2 class="title">Educación</h2>
+    <div class="cols">
+      <div class="card dark">
+        <div class="when">Ago 2021 – May 2026</div>
+        <h3>Licenciatura en Derecho</h3>
+        <small>UPAEP</small>
+      </div>
+      <div class="card">
+        <div class="when">Sep 2024 – Dic 2024</div>
+        <h3>Diplomado en Juicio de Amparo: 11 años desde su reforma</h3>
+        <small>UPAEP</small>
+      </div>
+      <div class="card">
+        <div class="when">Ago 2018 – Ago 2021</div>
+        <h3>Bachillerato</h3>
+        <small>Prepa UPAEP Sur</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="habilidades">
+  <div class="wrap">
+    <h2 class="title">Habilidades e Idiomas</h2>
+    <div class="tags">
+      <span class="tag">Pensamiento analítico y estratégico</span>
+      <span class="tag">Responsabilidad y compromiso total</span>
+      <span class="tag">Trabajo en equipo</span>
+      <span class="tag">Comunicación efectiva</span>
+      <span class="tag">Entrega de resultados</span>
+      <span class="tag">Puntualidad</span>
+      <span class="tag">Paquete Office avanzado integrando IA</span>
+    </div>
+    <div class="langs">
+      <div class="lang"><b>Español</b>Nativo</div>
+      <div class="lang"><b>Inglés</b>Intermedio</div>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="wrap">
+    <h2 class="title">Proyectos y Aplicaciones</h2>
+    <p class="proj-intro">Herramientas que desarrollé para llevar el Derecho y la Inteligencia Artificial a la práctica.</p>
+
+    <article class="proj" id="calc-isr">
+      <div class="proj-head">
+        <span class="proj-tag">Aplicación · Fiscal / Laboral</span>
+        <h3>Calculadora Nómina ISR + IMSS + Subsidio</h3>
+        <p>Comparativa de sueldo neto 2025 vs 2026 con ajuste de tarifas, UMA y el nuevo subsidio al empleo. Pruébala aquí mismo.</p>
+      </div>
+
+      <div class="calc-controls">
+        <label>Periodo de pago
+          <select id="c-period">
+            <option value="diario">Diario</option>
+            <option value="semanal">Semanal</option>
+            <option value="decenal">Decenal</option>
+            <option value="quincenal">Quincenal</option>
+            <option value="mensual" selected>Mensual</option>
+          </select>
+        </label>
+        <div class="zone">
+          <span>Zona geográfica</span>
+          <div class="seg">
+            <button type="button" id="z-gen" class="on">General</button>
+            <button type="button" id="z-zlfn">Frontera Norte</button>
+          </div>
+        </div>
+        <label><span>Ingreso bruto <span id="c-plabel">Mensual</span></span>
+          <div class="money"><i>$</i><input id="c-income" type="number" min="0" step="0.01" placeholder="0.00" inputmode="decimal"></div>
+        </label>
+      </div>
+
+      <div id="c-empty" class="calc-empty">Ingresa tu sueldo bruto para calcular.</div>
+
+      <div id="c-out" hidden>
+        <div class="diff" id="c-diff"></div>
+        <div class="res-grid" id="c-cards"></div>
+        <div class="legal">
+          <b>Fundamento y notas</b>
+          <ul>
+            <li><b>Tarifas ISR:</b> Anexo 8 RMF con ajuste inflacionario anual.</li>
+            <li><b>Salario mínimo:</b> Art. 96 LISR (ISR cero) y Art. 36 LSS (cuota IMSS a cargo del patrón).</li>
+            <li><b>Subsidio 2026:</b> tope mensual de $11,492.66 y factor de 15.02% del valor mensual de la UMA.</li>
+            <li><b>UMA:</b> 2025: $113.14 · 2026: $117.31.</li>
+          </ul>
+          <p class="warn">Herramienta informativa; verifica los resultados con un contador.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj" id="pres-pld">
+      <div class="proj-head">
+        <span class="proj-tag">Presentación · Capacitación jurídica</span>
+        <h3>Lavado de Dinero en México: Marco Normativo y Reformas</h3>
+        <p>Material didáctico para estudiantes de Derecho y abogados en ejercicio: LFPIORPI, art. 400 Bis CPF, sujetos obligados, autoridades, sanciones y la reforma de 2025. 51 diapositivas.</p>
+      </div>
+      <div class="deck" id="deck">
+        <div class="stage">
+          <img id="deck-img" src="assets/lavado/01.jpg" alt="Diapositiva 1">
+          <button class="nav prev" id="deck-prev" aria-label="Anterior">‹</button>
+          <button class="nav next" id="deck-next" aria-label="Siguiente">›</button>
+        </div>
+        <div class="deck-bar">
+          <span id="deck-count">1 / 51</span>
+          <input type="range" id="deck-range" min="1" max="51" value="1" aria-label="Ir a diapositiva">
+          <button type="button" id="deck-full">Pantalla completa</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj" id="citas-unam">
+      <div class="proj-head">
+        <span class="proj-tag">Aplicación · Investigación jurídica</span>
+        <h3>Citas Jurídicas UNAM</h3>
+        <p>Generador de referencias conforme al criterio del IIJ-UNAM para libros, artículos, leyes, jurisprudencia SCJN y TEPJF, Corte IDH y amparos.</p>
+      </div>
+      <div class="cg">
+        <div class="cg-types" id="cg-types" role="tablist"></div>
+        <div class="cg-form" id="cg-form"></div>
+        <div class="cg-out">
+          <div class="cg-out-head"><b>Cita generada</b><button type="button" id="cg-copy">Copiar texto</button></div>
+          <div class="cg-cit" id="cg-cit"></div>
+          <p class="cg-note">Revisa siempre los datos. El rubro de la jurisprudencia se muestra en MAYÚSCULAS para simular versalitas, y los títulos de libros y revistas en <i>cursiva</i>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj" id="ruta-ia">
+      <div class="proj-head">
+        <span class="proj-tag">Repositorio · IA generativa</span>
+        <h3>Ruta Smoke: contenido creado con IA</h3>
+        <p>Repositorio de piezas gráficas generadas con IA generativa para <b>La Ruta Smoke</b> (Veracruz – Puebla): promociones, historias y publicaciones con temática de temporada, cine y humor.</p>
+      </div>
+
+      <div class="how">
+        <h4>¿Cómo se hace? Chatbots entrenados para un contenido específico</h4>
+        <p>En lugar de pedirle todo a un chatbot genérico, preparo asistentes con instrucciones y contexto fijos para que cada uno produzca un solo tipo de contenido de forma consistente.</p>
+        <ol>
+          <li><b>Contexto del negocio.</b> Se le entrega al chatbot la identidad de la marca: logo, colores, tono de voz, menú, precios y público.</li>
+          <li><b>Instrucciones del formato.</b> Se define qué debe producir: historias verticales, promociones con precio, copys para redes, etc.</li>
+          <li><b>Temática por brief.</b> Cada pieza parte de una idea corta (Halloween, fútbol, Star Wars, memes) que el asistente convierte en prompt visual y texto.</li>
+          <li><b>Revisión humana.</b> Antes de publicar verifico precios, promociones y ortografía, porque la IA puede equivocarse en el texto dentro de la imagen.</li>
+        </ol>
+      </div>
+
+      <div class="gal" id="gal">
+        <figure><img loading="lazy" src="assets/ruta/1.jpg" alt="Promoción de 2 hamburguesas de autor con papas y 1 litro de agua, temática Halloween"><figcaption>Halloween · Hamburguesas de autor</figcaption></figure>
+        <figure><img loading="lazy" src="assets/ruta/2.jpg" alt="Menú Ruta Smoke con boneless, hamburguesa chicken crispy búfalo y chicken dogo"><figcaption>Halloween · Menú de sabores</figcaption></figure>
+        <figure><img loading="lazy" src="assets/ruta/3.jpg" alt="Promos de hot dogs con temática de cine de ciencia ficción"><figcaption>Temática de cine · Promos de hot dogs</figcaption></figure>
+        <figure><img loading="lazy" src="assets/ruta/4.jpg" alt="Meme de caricatura promocionando papas nacho"><figcaption>Humor · Meme de papas nacho</figcaption></figure>
+        <figure><img loading="lazy" src="assets/ruta/5.jpg" alt="Historia 'Prohibido comer solo' con promociones para compartir"><figcaption>Redes · «Prohibido comer solo»</figcaption></figure>
+        <figure><img loading="lazy" src="assets/ruta/6.jpg" alt="Publicación de papas nacho a 85 pesos"><figcaption>Producto · Papas nacho</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="proj" id="notaria-ia">
+      <div class="proj-head">
+        <span class="proj-tag">Repositorio · Asesoría en IA</span>
+        <h3>Notaría 24: implementación de IA y sus beneficios</h3>
+        <p>Asesoría para incorporar Inteligencia Artificial en la operación de una notaría, con tres frentes de trabajo y los beneficios que se presentaron en las láminas de apoyo.</p>
+      </div>
+
+      <div class="nt-top">
+        <figure class="nt-photo gal"><img src="assets/notaria/foto.jpg" alt="Julian Alexander Rendón en la oficina de la Notaría 24"><figcaption>Asesoría en la Notaría 24<small>Acompañamiento presencial para implementar IA en la operación diaria.</small></figcaption></figure>
+        <div>
+          <div class="how" style="margin-top:0">
+            <h4>Qué se asesoró</h4>
+            <ol>
+              <li><b>Cumplimiento legal y PLD 2025.</b> Adecuación a la reforma de prevención de lavado de dinero: umbrales, identificación del dueño beneficiario y sanciones.</li>
+              <li><b>Gestión operativa y automatización.</b> Extracción de datos de escrituras, INE y avalúos, y generación de documentos con lenguaje natural.</li>
+              <li><b>Calculadora ISR inteligente.</b> Cálculo del ISR por enajenación con actualización por INPC y desglose paso a paso.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="kpis">
+        <div><b>2 min</b><span>en lugar de 2 horas para facturar CFDI 4.0 con complemento de notario</span></div>
+        <div><b>40%</b><span>del tiempo productivo se pierde en captura manual</span></div>
+        <div><b>8,000 UMAs</b><span>umbral (≈ $907 mil MXN) de la reforma PLD 2025</span></div>
+        <div><b>Menos errores</b><span>revisión semántica de inconsistencias en los documentos</span></div>
+      </div>
+      <p class="nt-note">Las cifras provienen de las láminas de apoyo que elaboré para la asesoría; son estimaciones del caso presentado, no resultados auditados.</p>
+
+      <div class="gal" id="gal2">
+        <figure><img src="assets/notaria/n1.webp" alt="La práctica notarial tradicional ya no es sostenible en 2026"><figcaption>El problema · Práctica tradicional vs. digital<small>Captura manual, errores humanos y clientes que exigen transparencia digital.</small></figcaption></figure>
+        <figure><img src="assets/notaria/n2.webp" alt="Las notarías enfrentan una encrucijada: adaptarse o perder competitividad"><figcaption>La encrucijada · Adaptarse o perder competitividad<small>Carga regulatoria y operaciones complejas frente a la transformación con IA.</small></figcaption></figure>
+        <figure><img src="assets/notaria/n3.webp" alt="La IA extrae datos de escrituras, INE y avalúos y reduce errores"><figcaption>IA · Extracción de datos y menos errores<small>Lectura de escrituras, INE y avalúos, con detección de inconsistencias.</small></figcaption></figure>
+        <figure><img src="assets/notaria/n4.webp" alt="Motor fiscal que calcula el ISR por enajenación"><figcaption>Calculadora · ISR por enajenación<small>Cálculo con INPC actualizado y reporte en PDF paso a paso.</small></figcaption></figure>
+        <figure><img src="assets/notaria/n5.webp" alt="La reforma PLD 2025 elevó el estándar de cumplimiento"><figcaption>Cumplimiento · Reforma PLD 2025<small>Nuevo umbral, dueño beneficiario obligatorio y sanciones mayores.</small></figcaption></figure>
+        <figure><img src="assets/notaria/n6.webp" alt="Facturación CFDI 4.0 con complemento de notario en 2 minutos"><figcaption>Eficiencia · CFDI 4.0 con complemento<small>De 2 horas a 2 minutos con datos pre-poblados del expediente.</small></figcaption></figure>
+      </div>
+    </article>
+
+    <div class="lightbox" id="lb" hidden><button type="button" id="lb-x" aria-label="Cerrar">×</button><img id="lb-img" alt=""></div>
+
+    <div class="placeholder">
+      <b>Más proyectos próximamente</b>
+      Aquí se irán sumando otras aplicaciones y presentaciones.
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <h2>Contacto</h2>
+    <p>📞 22-27-10-79-08</p>
+    <p>✉️ <a href="mailto:julianrendonmartinez@gmail.com">julianrendonmartinez@gmail.com</a></p>
+    <small>© 2026 Julian Alexander Rendón Martinez · Cédula profesional 15797342</small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const UMA={y25:113.14,y26:117.31}, FACTOR_INT=1.0493;
+  const SMG={y25:{gen:248.93,zlfn:374.89},y26:{gen:278.80,zlfn:419.88}};
+  const SUB={y25:{limit:9081.00,factor:0.1182},y26:{limit:11492.66,factor:0.1502}};
+  const T25=[[0.01,0,1.92],[746.05,14.32,6.40],[6332.06,371.83,10.88],[11128.02,893.63,16.00],[12935.83,1182.88,17.92],[15487.72,1640.18,21.36],[31236.50,5004.12,23.52],[49233.01,9236.89,30.00],[93993.91,22665.17,32.00],[125325.21,32691.18,34.00],[375975.62,117912.32,35.00]];
+  const T26=[[0.01,0,1.92],[844.60,16.21,6.40],[7168.52,420.95,10.88],[12598.03,1011.68,16.00],[14644.65,1339.14,17.92],[17533.65,1856.84,21.36],[35362.84,5665.16,23.52],[55736.69,10457.08,30.00],[106410.50,25659.24,32.00],[141879.67,37009.68,34.00],[425642.01,133488.94,35.00]];
+  const PER={diario:[1,'Diario'],semanal:[7,'Semanal'],decenal:[10,'Decenal'],quincenal:[15.2,'Quincenal'],mensual:[30.4,'Mensual']};
+
+  function imssCalc(daily,days,uma){
+    const sbc=Math.min(daily*FACTOR_INT,uma*25);
+    let d=sbc*(0.0025+0.00375+0.00625+0.01125);
+    if(sbc>3*uma) d+=(sbc-3*uma)*0.004;
+    return {total:d*days,sbc};
+  }
+  function calc(amount,table,smgDaily,days,uma,sp){
+    if(!(amount>0)) return null;
+    const daily=amount/days, monthly=daily*30.4, f=days/30.4;
+    const im=imssCalc(daily,days,uma); let imss=im.total;
+    const br=table.map(b=>({lo:b[0]*f,fix:b[1]*f,pct:b[2]}));
+    let b=br.find((x,i)=>{const n=br[i+1];return amount>=x.lo&&(!n||amount<n.lo)})||br[0];
+    const gross=(amount-b.lo)*(b.pct/100)+b.fix;
+    let subsidy=0;
+    if(monthly<=sp.limit) subsidy=(uma*30.4*sp.factor/30.4)*days;
+    const exempt=amount<=smgDaily*days+1;
+    let tax=0;
+    if(exempt){imss=0}else{tax=Math.max(0,gross-subsidy)}
+    const ded=tax+imss;
+    return {tax,imss,subsidy,gross,net:amount-ded,rate:(ded/amount*100).toFixed(2),exempt,sbc:im.sbc,factor:sp.factor,limit:sp.limit};
+  }
+
+  const $=id=>document.getElementById(id);
+  const money=n=>'$'+n.toLocaleString('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2});
+  let border=false;
+
+  function card(year,r,win,plabel){
+    return `<div class="rcard${win?' win':''}">${win?'<div class="badge">MÁS RECIENTE</div>':''}
+      <h4>${year}<span>${r.exempt?'SMG · exento de retenciones':'Tasa efectiva: '+r.rate+'%'}</span></h4>
+      <div class="rrow"><span>ISR determinado (tarifa)</span><span>${money(r.gross)}</span></div>
+      <div class="rrow sub"><span>${r.subsidy>0?'(-) Subsidio al empleo':'Subsidio (no aplica)'}</span><span>${r.subsidy>0?'-':''}${money(r.subsidy)}</span></div>
+      <div class="rrow"><span>ISR a retener</span><span>${money(r.tax)}</span></div>
+      <div class="rrow"><span>(-) IMSS obrero</span><span>${money(r.imss)}</span></div>
+      <div class="rnet"><span>Neto ${plabel}</span><b>${money(r.net)}</b></div>
+      <div class="rfoot"><div><span>SBC (base IMSS)</span><span>${money(r.sbc)}</span></div>
+        <div><span>${r.subsidy>0?'Subsidio ('+(r.factor*100).toFixed(2)+'% UMA)':'Tope subsidio mensual'}</span><span>${money(r.subsidy>0?r.subsidy:r.limit)}</span></div></div>
+      ${r.exempt?'<div class="exempt"><b>Art. 96 LISR:</b> exención por salario mínimo. <b>Art. 36 LSS:</b> cuota IMSS a cargo del patrón.</div>':''}
+    </div>`;
+  }
+  function run(){
+    const p=PER[$('c-period').value], val=parseFloat($('c-income').value);
+    $('c-plabel').textContent=p[1];
+    const z=border?'zlfn':'gen';
+    const r25=calc(val,T25,SMG.y25[z],p[0],UMA.y25,SUB.y25);
+    const r26=calc(val,T26,SMG.y26[z],p[0],UMA.y26,SUB.y26);
+    $('c-empty').hidden=!!r25; $('c-out').hidden=!r25;
+    if(!r25) return;
+    const diff=r26.net-r25.net;
+    $('c-diff').innerHTML=`<div><b>${diff>=0?'Ganancia':'Pérdida'} neta ${p[1].toLowerCase()}</b><small>Neto 2026 vs neto 2025</small></div><div style="text-align:right"><b>${money(Math.abs(diff))}</b><small>${diff>=0?'Tu sueldo neto aumenta':'Tu sueldo neto disminuye'}</small></div>`;
+    $('c-cards').innerHTML=card('2025',r25,false,p[1])+card('2026',r26,true,p[1]);
+  }
+  $('c-period').addEventListener('change',run);
+  $('c-income').addEventListener('input',run);
+  $('z-gen').onclick=()=>{border=false;$('z-gen').classList.add('on');$('z-zlfn').classList.remove('on');run()};
+  $('z-zlfn').onclick=()=>{border=true;$('z-zlfn').classList.add('on');$('z-gen').classList.remove('on');run()};
+})();
+
+(function(){
+  const T=(n,l,x)=>Object.assign({n,l},x||{});
+  const URLF=[T('url','URL o DOI',{full:1,ph:'https://...'})];
+  const BOOKTAIL=[T('year','Año'),T('pages','Páginas',{ph:'Ej. 15-20'}),T('edition','Edición (número)',{ph:'Ej. 2'}),T('city','Ciudad'),T('publisher','Editorial'),T('translator','Traductor')];
+  const TYPES=[
+    {id:'libro',label:'Libro',authors:1,fields:[T('title','Título del libro',{full:1,ph:'Ej. El derecho dúctil'}),...BOOKTAIL]},
+    {id:'capitulo',label:'Capítulo de libro',authors:1,fields:[T('chapterTitle','Título del capítulo',{full:1}),T('title','Título del libro (obra colectiva)',{full:1}),{eds:1},...BOOKTAIL]},
+    {id:'articulo',label:'Artículo académico',authors:1,fields:[T('title','Título del artículo',{full:1}),T('journalName','Nombre de la revista / publicación',{full:1}),T('place','Lugar de edición'),T('series','Serie / época',{ph:'Ej. nueva serie'}),T('period','Periodo',{ph:'Ej. enero-abril'}),T('number','Número'),T('year','Año'),T('pages','Páginas',{ph:'Ej. 15-20'})]},
+    {id:'ley',label:'Leyes / Constituciones',fields:[T('article','Artículo',{ph:'Ej. 30'}),T('officialName','Nombre oficial (Constitución / ley)',{full:1,ph:'Ej. Constitución Política de los Estados Unidos Mexicanos'})]},
+    {id:'scjn',label:'Jurisprudencia SCJN',fields:[T('thesisNumber','Número de tesis'),T('rubro','Rubro',{full:1,ta:1,ph:'Texto del rubro...'}),T('source','Fuente (Semanario...)'),T('epoch','Época',{ph:'Ej. Décima Época'}),T('date','Fecha',{ph:'Ej. 13 de marzo de 2020'}),T('pages','Página')]},
+    {id:'tepjf',label:'Jurisprudencia TEPJF',fields:[T('thesisNumber','Núm. tesis / jurisp.',{ph:'Ej. 1/2015'}),T('rubro','Rubro',{full:1,ta:1}),T('source','Fuente (Gaceta...)',{full:1}),T('year','Año'),T('number','Número'),T('pages','Páginas')]},
+    {id:'idh',label:'Corte IDH',fields:[T('caseName','Nombre del caso / asunto',{full:1}),T('sentenceType','Tipo de documento',{sel:[['excepciones preliminares, fondo, reparaciones y costas','Sentencia (fondo / reparaciones)'],['medidas provisionales','Medidas provisionales'],['opinión consultiva','Opinión consultiva'],['resolución','Resolución']]}),T('date','Fecha',{ph:'25 de noviembre de 2021'}),T('seriesType','Serie',{ph:'Serie C',def:'Serie C'}),T('number','Número'),T('paragraph','Párrafo (opcional)')]},
+    {id:'amparo',label:'Amparos',fields:[T('officialName','Tipo y número',{full:1,ph:'Ej. Amparo directo penal 642/2016'}),T('source','Tribunal / emisor',{full:1,ph:'Ej. Pleno del Tercer Tribunal Colegiado...'}),T('place','Lugar'),T('date','Fecha')]}
+  ];
+  const $=id=>document.getElementById(id);
+  let type=TYPES[0], d={}, authors=[], citation='';
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  function fmtAuthors(){
+    const v=authors.filter(a=>a.last.trim());
+    if(!v.length) return '';
+    const f=a=>`${a.last}, ${a.first}`;
+    return v.length===1?f(v[0]):v.length===2?`${f(v[0])} y ${f(v[1])}`:`${f(v[0])} et al.`;
+  }
+  function web(t){
+    if(d.url){t+=`, disponible en: *${d.url}*`; if(d.accessDate) t+=` (fecha de consulta: ${d.accessDate})`}
+    return t;
+  }
+  function generate(){
+    const a=fmtAuthors(); let t='';
+    switch(type.id){
+      case 'libro': case 'capitulo': {
+        let b='';
+        if(type.id==='capitulo'){
+          b+=`${a}, "${d.chapterTitle||''}", en `;
+          if(d.editors) b+=`${d.editors} (${d.editorType||'coord.'}), `;
+        } else b+=a;
+        if(b && !b.endsWith('en ')) b+=', ';
+        b+=`*${d.title||''}*`;
+        const ed=(d.edition||'').replace(/\D/g,'');
+        if(ed && ed!=='1') b+=`, ${ed}a. ed.`;
+        if(d.translator) b+=`, trad. de ${d.translator}`;
+        if(d.city) b+=`, ${d.city}`;
+        if(d.publisher) b+=`, ${d.publisher}`;
+        if(d.year) b+=`, ${d.year}`;
+        if(d.pages) b+=`, ${/[-,]/.test(d.pages)?'pp.':'p.'} ${d.pages}`;
+        t=web(b); break;
+      }
+      case 'articulo':
+        t=`${a}, "${d.title||''}", *${d.journalName||''}*`;
+        if(d.place) t+=`, ${d.place}`;
+        if(d.series) t+=`, ${d.series}`;
+        if(d.year && !d.period) t+=`, ${d.year}`;
+        if(d.number) t+=`, núm. ${d.number}`;
+        if(d.period) t+=`, ${d.period}`;
+        if(d.year && d.period && !d.period.includes(d.year)) t+=` de ${d.year}`;
+        if(d.pages) t+=`, ${d.pages.includes('-')?'pp.':'p.'} ${d.pages}`;
+        t=web(t); break;
+      case 'ley': t=web(`Art. ${d.article||''}., ${d.officialName||''}`); break;
+      case 'scjn':
+        if(d.thesisNumber) t+=`Tesis ${d.thesisNumber}`;
+        if(d.rubro) t+=`${t?', ':''}${d.rubro.toUpperCase()}`;
+        if(d.source) t+=`, *${d.source}*`;
+        if(d.epoch) t+=`, ${d.epoch}`;
+        if(d.date) t+=`, ${d.date}`;
+        if(d.pages) t+=`, p. ${d.pages}`;
+        t=web(t); break;
+      case 'tepjf':
+        if(d.thesisNumber) t+=`Jurisprudencia ${d.thesisNumber}`;
+        if(d.rubro) t+=`${t?', ':''}${d.rubro.toUpperCase()}`;
+        if(d.source) t+=`, *${d.source}*`;
+        if(d.year) t+=`, año ${d.year}`;
+        if(d.number) t+=`, núm. ${d.number}`;
+        if(d.pages) t+=`, pp. ${d.pages}`;
+        t=web(t); break;
+      case 'idh':
+        t=`Corte IDH, *Caso ${d.caseName||''}*`;
+        if(d.sentenceType) t+=`, ${d.sentenceType}`;
+        if(d.date) t+=` del ${d.date}`;
+        if(d.seriesType) t+=`, ${d.seriesType}`;
+        if(d.number) t+=`, núm. ${d.number}`;
+        if(d.paragraph) t+=`, párr. ${d.paragraph}`;
+        t=web(t); break;
+      case 'amparo':
+        t=d.officialName||'';
+        if(d.source) t+=`, ${d.source}`;
+        if(d.place) t+=`, ${d.place}`;
+        if(d.date) t+=`, ${d.date}`;
+        t=web(t); break;
+    }
+    t=t.replace(/, ,/g,',').replace(/\.\./g,'.');
+    if(t && !t.endsWith('.')) t+='.';
+    if(t.startsWith(', ')) t=t.slice(2);
+    citation=t; paint();
+  }
+  function paint(){
+    const el=$('cg-cit');
+    if(!citation||citation.length<5){el.className='cg-cit empty';el.textContent='Completa los campos para generar la cita...';return}
+    el.className='cg-cit';
+    el.innerHTML=citation.split('*').map((p,i)=>i%2?`<i>${esc(p)}</i>`:esc(p).replace(/et al\./g,'<i>et al.</i>')).join('');
+  }
+  function drawAuthors(){
+    const box=$('cg-authors'); if(!box) return;
+    box.innerHTML='<span>Autor(es) / coordinadores</span>'+authors.map((a,i)=>`<div class="cg-arow"><input data-a="${i}" data-k="last" placeholder="Apellidos" value="${esc(a.last)}"><input data-a="${i}" data-k="first" placeholder="Nombres" value="${esc(a.first)}">${authors.length>1?`<button type="button" data-rm="${i}" aria-label="Quitar">×</button>`:''}</div>`).join('')+'<button type="button" class="cg-add" id="cg-add">+ Agregar otro autor</button>';
+  }
+  function drawForm(){
+    d={}; authors=[{last:'',first:''}]; citation='';
+    type.fields.forEach(f=>{if(f.def)d[f.n]=f.def; if(f.sel)d[f.n]=f.sel[0][0]});
+    d.editorType='coord.';
+    let h='';
+    if(type.authors) h+='<div class="full cg-authors" id="cg-authors"></div>';
+    h+=type.fields.map(f=>{
+      if(f.eds) return `<div class="full cg-eds"><label>Editor / coord. del libro<input name="editors" placeholder="Ej. González Oropeza, Manuel"></label><label>Tipo<select name="editorType">${['coord.','ed.','comp.','coords.','eds.'].map(o=>`<option>${o}</option>`).join('')}</select></label></div>`;
+      const c=f.full?' class="full"':'';
+      const ctl=f.sel?`<select name="${f.n}">${f.sel.map(o=>`<option value="${esc(o[0])}">${o[1]}</option>`).join('')}</select>`
+        :f.ta?`<textarea rows="2" name="${f.n}" placeholder="${esc(f.ph||'')}"></textarea>`
+        :`<input name="${f.n}" placeholder="${esc(f.ph||'')}" value="${esc(f.def||'')}">`;
+      return `<label${c}>${f.l}${ctl}</label>`;
+    }).join('');
+    h+='<div class="cg-sep">Fuentes electrónicas (opcional)</div><label class="full">URL o DOI<input name="url" placeholder="https://..."></label><label class="full" id="cg-access" hidden>Fecha de consulta<input name="accessDate" placeholder="Ej. 15 de junio de 2020"></label>';
+    $('cg-form').innerHTML=h; drawAuthors(); generate();
+  }
+  $('cg-types').innerHTML=TYPES.map(t=>`<button type="button" data-t="${t.id}">${t.label}</button>`).join('');
+  function markTab(){document.querySelectorAll('#cg-types button').forEach(b=>b.classList.toggle('on',b.dataset.t===type.id))}
+  $('cg-types').addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return; type=TYPES.find(t=>t.id===b.dataset.t); markTab(); drawForm()});
+  $('cg-form').addEventListener('input',e=>{
+    const t=e.target;
+    if(t.dataset.a!==undefined){authors[+t.dataset.a][t.dataset.k]=t.value}
+    else if(t.name){d[t.name]=t.value; if(t.name==='url') $('cg-access').hidden=!t.value}
+    generate();
+  });
+  $('cg-form').addEventListener('change',e=>{if(e.target.name){d[e.target.name]=e.target.value;generate()}});
+  $('cg-form').addEventListener('click',e=>{
+    if(e.target.id==='cg-add'){authors.push({last:'',first:''});drawAuthors();generate()}
+    else if(e.target.dataset.rm!==undefined){authors.splice(+e.target.dataset.rm,1);drawAuthors();generate()}
+  });
+  $('cg-copy').onclick=async()=>{
+    const txt=citation.replace(/\*/g,''); if(!txt) return;
+    try{await navigator.clipboard.writeText(txt)}catch(_){const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(__){}ta.remove()}
+    const b=$('cg-copy'); b.textContent='¡Copiado!'; setTimeout(()=>b.textContent='Copiar texto',1800);
+  };
+  markTab(); drawForm();
+})();
+
+(function(){
+  const lb=document.getElementById('lb'), li=document.getElementById('lb-img');
+  const close=()=>{lb.hidden=true};
+  document.addEventListener('click',e=>{const f=e.target.closest('.gal figure, figure.gal'); const im=f&&f.querySelector('img'); if(im){li.src=im.src;li.alt=im.alt;lb.hidden=false}});
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+})();
+
+(function(){
+  const N=51; let cur=1;
+  const img=document.getElementById('deck-img'), range=document.getElementById('deck-range'), cnt=document.getElementById('deck-count'), deck=document.getElementById('deck');
+  const pad=n=>String(n).padStart(2,'0');
+  function go(n){
+    cur=Math.min(N,Math.max(1,n));
+    img.src='assets/lavado/'+pad(cur)+'.jpg'; img.alt='Diapositiva '+cur;
+    range.value=cur; cnt.textContent=cur+' / '+N;
+    const nx=new Image(); if(cur<N) nx.src='assets/lavado/'+pad(cur+1)+'.jpg';
+  }
+  document.getElementById('deck-prev').onclick=()=>go(cur-1);
+  document.getElementById('deck-next').onclick=()=>go(cur+1);
+  range.oninput=()=>go(+range.value);
+  document.getElementById('deck-full').onclick=()=>{document.fullscreenElement?document.exitFullscreen():deck.requestFullscreen&&deck.requestFullscreen()};
+  document.addEventListener('keydown',e=>{
+    const r=deck.getBoundingClientRect(), vis=r.top<innerHeight&&r.bottom>0;
+    if(!vis||/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)&&document.activeElement!==range) return;
+    if(e.key==='ArrowRight'){go(cur+1);e.preventDefault()} else if(e.key==='ArrowLeft'){go(cur-1);e.preventDefault()}
+  });
+})();
+</script>
+</body>
+</html>
